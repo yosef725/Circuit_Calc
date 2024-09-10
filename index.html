@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدائرة</title>
+</head>
+<body>
+        <input type="number" id="r" placeholder="نصف قطر الدائرة (r)">
+        <br>
+        <br>
+        <button onclick="submit()">احسب</button>
+        <h3 id="D"></h3>
+
+        <h3 id="C"></h3>
+        
+        <h3 id="A"></h3>
+        
+        
+        <h3 id="V"></h3>
+        
+        
+
+</body>
+
+    <script>
+        function submit(){
+            const C = document.getElementById("C");
+            const A = document.getElementById("A");
+            const D = document.getElementById("D");
+            const V = document.getElementById("V");
+            const r = document.getElementById('r').value;
+            C.innerHTML = " محيط الدائرة : "+ 2 * 3.14 * + r + 'cm ' ;
+            A.innerHTML = " مساحة الدائرة : "+ 3.14 * r**2 + 'cm^2 ';
+            V.innerHTML = " حجم الكرة : "+ 4/3 * 3.14 * r**3 + 'cm^3 ';
+            D.innerHTML = " قطر الدائرة : "+ 2 * r + 'cm ';
+        }
+        
+
+    </script>
+</html>
